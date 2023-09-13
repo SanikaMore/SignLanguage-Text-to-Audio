@@ -1,6 +1,7 @@
 from function import *
 from time import sleep
 
+// Storing action--> sequence number....creating directory
 for action in actions: 
     for sequence in range(no_sequences):
         try: 
@@ -29,7 +30,7 @@ with mp_hands.Hands(
                 # frame=cv2.imread('{}{}.png'.format(action,sequence))
                 # frame=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
 
-                # Make detections
+                # Make landmark  detections
                 image, results = mediapipe_detection(frame, hands)
 #                 print(results)
 
